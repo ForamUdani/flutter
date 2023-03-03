@@ -45,22 +45,34 @@ class _Screen1State extends State<Screen1> {
                   ),
                 ),
               ),
-              Container(
-                height: 40,
-                width: 160,
-                margin: EdgeInsets.only(top: 80),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    'Log In',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 25,
+              Expanded(
+
+                child: InkWell(
+                  onTap: (){
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context){
+                        return Screen2();
+                      }
+                    ));
+                  } ,
+                  child: Container(
+                    height: 40,
+                    width: 160,
+                    margin: EdgeInsets.only(top: 80),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Log In',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 25,
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.yellow,
+                        shape: StadiumBorder(),
+                      ),
                     ),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.yellow,
-                    shape: StadiumBorder(),
                   ),
                 ),
               ),
