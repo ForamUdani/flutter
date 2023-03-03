@@ -43,14 +43,25 @@ class _Screen2State extends State<Screen2> {
                       SizedBox(
                         height: 100,
                       ),
-                      Text(
-                        'Different\n Kind Of Food',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                          fontSize: 40,
+                      Expanded(
+                        child: InkWell(
+                          onTap: (){
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context){
+                                  return Screen3();
+                                }
+                            ));
+                          } ,
+                          child: Text(
+                            'Different\n Kind Of Food',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                              fontSize: 40,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
-                        textAlign: TextAlign.center,
                       ),
                     ],
                   ),
